@@ -17,15 +17,11 @@
             android:name=".MyBrowserActivity"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="course.labs.intentslab.mybrowser.MyBrowserActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="http"/>
             </intent-filter>
-  
-            <!-- TODO - Add necessary intent filter information so that this
-            			    Activity will accept Intents with the 
-            			    action "android.intent.action.VIEW" and with an "http" 
-            			    schemed URL -->
         </activity>
     </application>
 
