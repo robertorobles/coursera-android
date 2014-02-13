@@ -14,6 +14,9 @@
     		  "course.labs.permissions.DANGEROUS_ACTIVITY_PERM" 
           and "dangerous" protection level.
     -->
+    <permission
+        android:name="course.labs.permissions.DANGEROUS_ACTIVITY_PERM"
+        android:protectionLevel="dangerous"/>
 
     <application
         android:allowBackup="true"
@@ -25,7 +28,8 @@
 
         <activity
             android:name=".DangerousActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:permission="course.labs.permissions.DANGEROUS_ACTIVITY_PERM" >
 
             <!--
                  TODO - add additional intent filter info so that this Activity
@@ -39,6 +43,12 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            
+            <intent-filter >
+                <action android:name="course.labs.permissions.DANGEROUS_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />                
+            </intent-filter>
+            
         </activity>
     </application>
 
