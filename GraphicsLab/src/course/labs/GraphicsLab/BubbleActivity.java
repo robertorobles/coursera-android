@@ -143,7 +143,9 @@ public class BubbleActivity extends Activity {
 				int numberChilds = mFrame.getChildCount();
 				for (int i = 0; i < numberChilds; i++) {
 					final BubbleView bubble = (BubbleView) mFrame.getChildAt(i);
-					bubble.deflect(velocityX, velocityY);
+					if (bubble.intersects(event1.getX(),event1.getY())) {
+						bubble.deflect(velocityX, velocityY);
+					}
 				}
 
 				return true;
